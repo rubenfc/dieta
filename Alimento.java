@@ -65,4 +65,30 @@ public class Alimento
         }
         return componente;
     }
+    
+    /**
+     * devuelve los gramos de grasas
+     */
+    public float getGrasas()
+    {
+        return grasas;
+    }
+    
+    /**
+     * devuelve las proteinas
+     */
+    public float getProteinas()
+    {
+        return proteinas;
+    }
+    
+    /**
+     * devuelve los carbohidratos 
+     */
+    public float getCarbohidratos()
+    {
+        return carbohidratos;
+    }
+    
+   
 }
