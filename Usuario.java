@@ -76,4 +76,36 @@ public class Usuario
        }
        return porcentaje;
     }
+    
+    /**
+     * devuelve el numero de calorias 
+     */
+    public double getCalorias()
+    {
+        return calorias;
+    }
+    
+    /**
+     * devuelve el nombre 
+     */
+    public String getNombre()
+    {
+        return nombre;
+    }
+    
+    /**
+     * compara entre dos usuarios el numero de calorias 
+     */
+    public void compararCalorias(Usuario nombre)
+    {
+        if(nombre.getCalorias() > calorias)
+        {
+            System.out.println(nombre.getNombre() + " ha consumido mas calorias que " + nombre);
+        }
+        else
+        {
+            System.out.println(nombre + " ha consumido mas colorias que " + nombre.getNombre());
+        }
+    }
+
 }
