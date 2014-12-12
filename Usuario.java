@@ -9,11 +9,17 @@ public class Usuario
 {
     // el nombre del usuario
     private String nombre;
+    //almacena las proteinas
     private float proteinas;
+    //almacena las grasas
     private float grasas;
+    //almacena los carbohidratos 
     private float carbohidratos;
+    //almacena las calorias
     private double calorias;
+    //almacena el alimento de mayor calorias consumido
     private String caloriaMayor;
+    //almacena el numero de calorias del alimento con mas calorias
     private double caloriaMaxima;
     
     /**
