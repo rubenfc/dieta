@@ -39,7 +39,7 @@ public class Alimento
     /**
      * calcula el nivel de calorias 
      */
-    private double getCalorias()
+    public double getCalorias()
     {
         double calorias = (proteinas * 4.0) + (carbohidratos * 4.0) + (grasas * 9F); 
         return calorias;

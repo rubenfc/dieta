@@ -12,6 +12,7 @@ public class Usuario
     private float proteinas;
     private float grasas;
     private float carbohidratos;
+    private double calorias;
     
     /**
      * inicializa el atributo nombre al nombre que metas
@@ -28,7 +29,8 @@ public class Usuario
     {
        proteinas = nombre.getProteinas() * gramos;
        grasas = nombre.getGrasas() * gramos;
-       carbohidratos = nombre.getCarbohidratos() *gramos;
+       carbohidratos = nombre.getCarbohidratos() * gramos;
+       calorias = nombre.getCalorias() * gramos;
     }
     
     /**
@@ -37,7 +39,7 @@ public class Usuario
     public void totalComido()
     {
         System.out.println("nombre: " + nombre + "\n" + "proteinas ingeridas: " + proteinas + "\n" + "Carbohidratos ingeridos: " + carbohidratos + "\n" +
-                           "Grasas ingeridas: ");
+                           "Grasas ingeridas: " + grasas + "\n" + "calorias: " + calorias);
     }
     
     /**
