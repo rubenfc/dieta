@@ -13,6 +13,8 @@ public class Usuario
     private float grasas;
     private float carbohidratos;
     private double calorias;
+    private String caloriaMayor;
+    private double caloriaMaxima;
     
     /**
      * inicializa el atributo nombre al nombre que metas
@@ -31,6 +33,11 @@ public class Usuario
        grasas = nombre.getGrasas() * gramos;
        carbohidratos = nombre.getCarbohidratos() * gramos;
        calorias = nombre.getCalorias() * gramos;
+       if(nombre.getCalorias() > caloriaMaxima)
+       {
+           caloriaMaxima = nombre.getCalorias();
+           caloriaMayor = nombre.getNombreAli();
+       }
     }
     
     /**
@@ -45,7 +52,7 @@ public class Usuario
     /**
      * devuelve los porcentajes de macronutrientes que has comido 
      */
-    public String porcentajeComido()
+    public void porcentajeComido()
     {
        String porcentaje = null;
        if(proteinas != 0)
@@ -74,7 +81,7 @@ public class Usuario
        {
            porcentaje = porcentaje + "\n" + carbohidratos  ;
        }
-       return porcentaje;
+       System.out.println(porcentaje + ".");
     }
     
     /**
@@ -106,6 +113,14 @@ public class Usuario
         {
             System.out.println(nombre + " ha consumido mas colorias que " + nombre.getNombre());
         }
+    }
+    
+    /**
+     * muestra el alimento con mayor cantidad de calorias consumido
+     */
+    public void alimentoCalorico()
+    {
+        System.out.println("Alimento más calórico ingerido por el usuario hasta el momento: " + caloriaMayor);
     }
 
 }

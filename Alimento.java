@@ -8,7 +8,7 @@
 public class Alimento
 {
     //el nombre del alimento
-    private String nombre;
+    private String nombreAli;
     //los gramos de proteinas 
     private float proteinas;
     //los gramos de carboidratos 
@@ -19,9 +19,9 @@ public class Alimento
     /**
      * inicializa los atributos 
      */
-    public void Alimmento (String nombre, float proteinas, float carbohidratos, float grasas)
+    public void Alimmento (String nombreAli, float proteinas, float carbohidratos, float grasas)
     {
-        this.nombre = nombre;
+        this.nombreAli = nombreAli;
         this.proteinas = proteinas;
         this. carbohidratos = carbohidratos;
         this.grasas = grasas;
@@ -32,7 +32,7 @@ public class Alimento
      */
     public void muestraDatos()
     {
-        System.out.println("nombre: " + nombre + "\n" + "proteinas por cada 100g " + proteinas + "\n" + "Carbohidratos por cada 100 gramos: " + carbohidratos + "\n" +
+        System.out.println("nombre: " + nombreAli + "\n" + "proteinas por cada 100g " + proteinas + "\n" + "Carbohidratos por cada 100 gramos: " + carbohidratos + "\n" +
                            "Grasas por cada 100 gramos: " + grasas + "calorias: " + getCalorias() + "\n" + "ccomponente mayoyitario: " + getComponenteMayor());
     }
     
@@ -89,7 +89,13 @@ public class Alimento
     {
         return carbohidratos;
     }
-   
+   /**
+    * devuelve el nombre 
+    */
+   public String getNombreAli()
+   {
+       return nombreAli;
+   }
     
    
 }
