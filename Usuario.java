@@ -21,7 +21,9 @@ public class Usuario
         this.nombre = nombre;
     }
     
-    
+    /**
+     * metodo que simula comer 
+     */
     public void comer( Alimento nombre, float gramos)
     {
        proteinas = nombre.getProteinas() * gramos;
@@ -29,9 +31,47 @@ public class Usuario
        carbohidratos = nombre.getCarbohidratos() *gramos;
     }
     
+    /**
+     * imprime por pantalla los macronutrientes que has comido
+     */
     public void totalComido()
     {
         System.out.println("nombre: " + nombre + "\n" + "proteinas ingeridas: " + proteinas + "\n" + "Carbohidratos ingeridos: " + carbohidratos + "\n" +
                            "Grasas ingeridas: ");
+    }
+    
+    /**
+     * devuelve los porcentajes de macronutrientes que has comido 
+     */
+    public String porcentajeComido()
+    {
+       String porcentaje = null;
+       if(proteinas != 0)
+       {
+           porcentaje = proteinas + "%";
+       }
+       else 
+       {
+           porcentaje = proteinas + ".";
+       }
+       
+       if(grasas != 0)
+       {
+           porcentaje = porcentaje + "\n"+ grasas + "%";
+       }
+       else
+       {
+           porcentaje = porcentaje + "\n" + grasas  ;
+       }
+       
+       if (carbohidratos != 0)
+       {
+           porcentaje = porcentaje + "\n" + carbohidratos + "%";
+       }
+       else
+       {
+           porcentaje = porcentaje + "\n" + carbohidratos  ;
+       }
+       return porcentaje;
     }
 }
